@@ -1,15 +1,16 @@
 const panels = document.querySelectorAll('.panel')
 
-panels.forEach(panel =>{
-    panel.addEventListener('click' , function(e){
-        removeActiveClases()
+
+
+panels.forEach(panel => {
+    panel.addEventListener('click' , function (e) {
+        removeActive()
         panel.classList.add('active')
     })
-}
-)
+})
 
-function removeActiveClases() {
-    panels.forEach(panel =>{
+const removeActive = ()=>{
+    panels.forEach(panel=>{
         panel.classList.remove('active')
     })
 }
